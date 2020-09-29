@@ -1,0 +1,848 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box; /*Para que todo (Padding-border) se contenga dentro de cada elemento*/
+}
+@font-face {
+    font-family: ChakraPetch-Regular;
+    src: url('/fonts/ChakraPetch-Regular.ttf');
+}
+
+@font-face {
+    font-family: ChakraPetch-Bold;
+    src: url('/fonts/ChakraPetch-Bold.ttf');
+}
+:root{
+    --primary-color:#fff4fd;
+}
+
+a{
+    text-decoration: none;
+}
+.imageArrow{ /*Posicion a la flecha*/
+    height: 24px;
+    width: 24px;
+    margin: 15px 15px 4px 1px;
+}
+.light{
+    background-color:var(--primary-color);
+}
+.light .head{
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family:'ChakraPetch-Regular';
+    letter-spacing: 0;
+}
+.light .headMain{
+    width: 100%;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+}
+
+.headerButton{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.light .headerButton p{
+    color:var(--secundary-color);
+   
+}
+.light .button{
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    width: 144PX;
+    height: 36PX;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    padding-top: 8px;
+}
+
+
+.light .button:hover{
+    background-color: rgb(230, 187, 226);
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.light .button:active{
+    background-color: rgb(230, 187, 226);
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+}
+.fatherMainList:hover .button-elegirtema{
+    background-color: rgb(230, 187, 226);
+}
+
+.fatherMainList:hover .button-elegirtema span{
+    outline: 1px dotted #110038;
+    outline-offset: -5px;
+    cursor: pointer;
+}
+
+.fatherMainList:hover .buttonimg-elegirtema{
+    background-color: rgb(230, 187, 226);
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -5px;
+    cursor: pointer;
+}
+
+.light .buttonTopic{
+    width: 130px;
+    height: 36px;
+    padding: 7px 0px 7px 0px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 18px;
+    z-index: 2000;
+}
+.light .buttonTopic:hover{
+    background-color: rgb(230, 187, 226);
+    cursor: pointer;
+}
+
+.light .buttonSearch:disabled {
+    color: #B4B4B4;
+}
+.light .buttonSearch{
+    width: 102PX;
+    height: 36PX;
+    background: #E6E6E6;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    text-align: center;
+    margin-top: 19px;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #B4B4B4;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+.light .buttonSearch:enabled{
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;    
+    color: #110038; 
+}
+
+.light .buttonSearch:enabled:hover {
+    outline-color: #110038;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -5px;
+    background:#E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.previewsSearch{
+    width: 100%;
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    padding-left: 3%;
+    padding-right: 7%;
+    padding-top: 1%;
+}
+
+.divPreviewSearch{
+    padding: 5px;
+    margin-right: 5px;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 18px;
+    cursor: pointer;
+}
+.light select>option:hover
+{ 
+    padding:11px 55px 10px 25px;
+    margin-top: 5px;
+    background: #F0F0F0;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+}
+.autocomplete-father{
+    padding: 12px;
+    width: 90%;
+    margin-right: 4%;
+    margin-left: 3%;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    display: none;
+}
+.autocomplete-sons{
+    padding: 3px 10px;
+    margin-bottom: 5px;
+    width: 90.5%;
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.autocomplete-sons:hover{
+    outline-color: #110038;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -5px;   
+    background: #DBDBDB;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+}
+
+.light.buttonTopic:active{
+    background-color: rgb(230, 187, 226);
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+}
+.buttonTopic span {
+    padding-left: 36px;
+    padding-right: 34px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.buttonSelectTheme{
+    height: 36px;
+    width: 36px;
+    margin-left:-36px;
+    padding: 7px 7px 7px 11px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 18px;
+    z-index: 2001;
+}
+
+
+
+/* .topic {
+    margin: 0px auto 5px auto;
+    height: 36px;
+    overflow: hidden;
+    width: 230px;
+    position: relative;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+} */
+select:focus{ outline: none;}
+/* .topic::after{
+	content:"\025be";
+	display:table-cell;
+	padding-top:7px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	background-color:#d9d9d9;
+	position:absolute;
+	top:0;
+	right:0px;	
+	pointer-events: none;
+} */
+
+
+.borderSearch{ /*Diseñando el border*/
+    margin-left: 3%;
+    margin-right: 4%;
+    width: 90%;
+    height: 18px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-family: 'ChakraPetch-Bold';
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    position: relative;
+    padding-left: 3px;
+}
+
+.search{
+    margin-left: 3%;
+    margin-right: 4%;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    align-content: center;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.search .searchText{
+    width: 90%;
+    height: 43px;
+    margin-left: 1%;
+    margin-top: 15px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    padding-left: 6px;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.sectionRandom{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.divNameImg{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-family: 'ChakraPetch-Bold';
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    width: 290px;
+    height: 20px;
+    border: 0px;
+    
+}
+.imgX{
+    cursor: pointer;
+}
+.butImgRamdom{
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
+    position: absolute;
+    top: 83%;
+    left:3%; 
+    z-index: 2;
+    padding: 7px;
+}
+.suggestion{
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    width: 97%;
+    height: 38px;
+    padding-left: 10px;
+    margin-top: 30px;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+
+}
+
+.imputMisGuifos{
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    width: 70%;
+    height: 38px;
+    padding-left: 10px;
+    margin-top: 30px;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    margin-top: 20px;
+    margin-left: 13%;
+    margin-right: 4%;
+}
+.misGuifos{
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    width: 97%;
+    height: 38px;
+    padding-left: 10px;
+
+}
+.marginImages{   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 97%;
+    margin-top: 1%;
+}
+.marginImagesContent{
+    margin: 3px 3px;
+    cursor: pointer;
+}
+.divTrendingMain{
+    position: relative;
+}
+.divTrendingMain:hover{
+    outline-color: #110038;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -6px;
+}
+.light .divTrendingMain:hover .classTrendyText{
+    visibility: visible;
+    color: #FFFFFF;
+    font-family: 'ChakraPetch-Regular';
+    outline-color: #110038;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -3px;
+    padding-left: 1%;
+}
+.light .classTrendyText{
+    margin-left: 1%;
+    width: 98%;
+    position: absolute;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    bottom: 0px;
+    visibility: hidden;
+}
+.marginImagesMain{
+    position: relative;
+}
+.marginImages2{
+    height: 280px;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    background: #E6E6E6;
+    padding: 3px;
+
+}
+.marginImages2:hover{
+    outline-color: #110038;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: -5px;   
+    cursor: pointer;
+}
+.galleryGifos2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    margin-right: 7%;
+}
+.galleryGifos{
+    margin-top: 20px;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.instructions{
+    font-family: 'ChakraPetch-Regular';
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+    justify-content: center;
+    margin-left: 60px;
+    padding: 10px 50px 10px 20px;
+    line-height: 30px;
+}
+.light .createGuifos{
+    width: 70%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Bold";
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-left: 25%;
+    margin-top:5%;
+}
+.createContaniner{
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+   
+}
+
+.divInstructions{
+    width: 70%;
+    padding-top: 30px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-left: 25%;
+}
+
+.instructionsForUpload{
+    
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    padding-top: 5%;
+}
+
+.instructionsMain{
+  width: 80%;
+}
+.tittleInstructions{
+    font-family:'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 2%;
+}
+.uploadButtons{
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 7%;
+}
+
+.light .buttonUpload{
+    background: #FFF4FD;;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    width: 120PX;
+    height: 34PX;
+    font-family: 'ChakraPetch-Regular';
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-align: center;
+    line-height: 18px;
+    padding-top: 2px;
+    margin-right: 1%;
+}
+.light .buttonUpload:hover{
+    
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+.fatherRecord{
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    width: 70%;
+    margin-left: 25%;
+    margin-top: 5%;
+
+}
+.capture{
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+.classCapture{
+    width: 100%;
+    justify-content: center;
+    display: none;
+    padding-left: 20%;
+}
+.createCapture{
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Bold";
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.createVideo{
+    height: 380px;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.classVideo{
+    height: 95%;
+    width: 70%;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.recordingDiv{
+    width: 100%;    
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.captureCreatemain{
+    width: 100%;
+    padding: 5px 8px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-family: "ChakraPetch-Bold";
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.createGifSuccess{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.cameraRecord{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.timeRecord{
+    padding: 0px 2%;
+    height: 36px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    font-family: "ChakraPetch-Regular";
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.buttonCamera{
+    display: flex;
+    justify-content: flex-end;
+}
+.imgCamera{
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-right: -1px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.camera{
+    height: 30px;
+    padding: 5px 35px;
+    margin-bottom: 10px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+}
+.gifCompleteRecording{
+    display: none;
+    justify-content: flex-end;
+    cursor: pointer;
+    
+}
+
+.gifCompleteRecordingImgCamera{
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-right: -1px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.gifCompleteRecordingCamera{
+    height: 30px;
+    padding: 5px 35px;
+    margin-bottom: 10px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Regular";
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+}
+.gifRepetUpload{
+    width: 48%;
+    display: none;
+    justify-content: space-between;
+}
+
+.buttonGifRepetUpload{
+    /* height: 30px; */
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Regular";
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.buttonGifRepetUpload:hover{
+    background: #F0E5EE;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+.gifUpload{
+    /* height: 30px; */
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Regular";
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.gifUpload:hover{
+    background: #F0E5EE;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.divCancel{
+    display: none;
+    justify-content: flex-end;
+}
+
+.buttonUploadGif{
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: "ChakraPetch-Regular";
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.buttonUploadGif:hover{
+    background: #F0E5EE;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.gifBorder{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.GifButtonSuccess{
+    margin: 0px 40px 0px 10px;
+}
+.marginText {
+    margin: 0px;
+}
+.buttonsGifCreate{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonReadyGif{
+    margin: 80px 40px 20px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+.gif-container-repetir{
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.gif-container-repetir:hover{
+    background: #F0E5EE;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    border: 1px dotted  #110038;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.light .footerdMain{
+    width: 100%;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family:'ChakraPetch-Regular';
+    letter-spacing: 0;
+}
