@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/stylesdark.css">
+    <!-- g0VjvRHYxnGUGHSHqB4HexqaeXtUgAsi Key of giphy-->
+    
+    <title>My proyect gifOS</title>
+</head>
+<body id="myBody" onload="UploadlastStyle()" class="light">
+<header>
+    <div class="headMain">
+        <p class="head">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </div> 
+    <div class="headerSearchUpload">
+        <a title="Volver" href="index.html">
+            <img src="./sources/images/arrow.svg" alt="Volver" class="imageArrow" id="idArrow">
+        </a>
+        <a title="Buscar gifs" href="index.html">
+            <img src="./sources/images/gifOF_logo.png" alt="GIFologo" class="imageMain" id="idLogo">
+        </a>
+        
+    </div>    
+</header>
+<section id="instructionsMainCreate">
+    <div class="instructionsMain" id="instructionsMain">
+        <div class="createContaniner" id="createContaniner"> 
+            <div class="createGuifos">Crear Guifos</div>
+            <div class="divInstructions">
+                <div class="instructionsForUpload">
+                    <img src="./sources/images/window_img.png" alt="logoWindow" class="windowLogo" id="idwindowLogo">
+                    <p class="tittleInstructions">
+                        <b>Aquí podrás crear tus propios guifos</b>
+                    </p>
+                </div>
+                    <p class="instructions">
+                        Crear tu <b><em>guifo</em></b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:<br>
+                        <b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>
+                        <b>2)</b> Capturar tu momento guifo<br>
+                        <b>3)</b> Revisar el momento<br>
+                        <b>4)</b> Listo para subir y compartir!<br>
+                        ¿Quieres comenzar a crear tu <b><em>guifo</em></b> ahora?<br>
+                    </p>
+                <div class="uploadButtons"> 
+                    <button class="buttonUpload" onclick="volver()">Cancelar</button>
+                    <button class="buttonUpload" onclick="start()">Comenzar</button>
+                </div> 
+            </div>
+        </div>
+        <div id="capturar" class="capture">
+            <div class="fatherRecord">
+                <div class="createCapture">
+                    Un Chequeo Antes de Empezar
+                    <img src="./sources/images/button3.svg" alt="x">
+                </div>
+                <div class="createVideo">
+                    <video autoplay="">
+                    </video>
+                    <img id="imgvideo" width="0" height="0" alt="imgvideo" src="./sources/images/background.jpg"> <!-- pte -->
+                    <div></div>
+                </div>
+                <div class="cameraRecord">
+                    <span class="timeRecord" id="timeRecord">
+                        <span id="hours">
+                            00
+                        </span>:<span id="minutes">
+                            00
+                        </span>:<span id="seconds">
+                            00
+                        </span>
+                    </span>
+                    <div class="buttonCamera" id="buttonCamera" onclick="getStreamAndRecord()">
+                        <div class="imgCamera">
+                            <img src="./sources/images/camera.svg" alt="camera" width="15" id="cameraImgCapturar">
+                        </div>
+                        <button type="button" class="camera" id="imgCapturar">
+                            Capturar
+                        </button>
+                    </div>
+                    <div class="gifCompleteRecording" id="gifCompleteRecording">
+                        <div class="gifCompleteRecordingImgCamera">
+                            <img src="./sources/images/recording.svg" alt="recording" width="15">
+                        </div>
+                        <button type="button" class="gifCompleteRecordingCamera" id="stoped">
+                            Listo
+                        </button>
+                    </div>
+                    <div class="gifRepetUpload" id="gifRepetUpload">
+                        <button type="button" class="buttonGifRepetUpload" onclick="repeatCapture()">
+                            Repetir Captura
+                        </button>
+                        <button type="button" class="gifUpload" onclick="subirGif()">
+                            Subir Guifo
+                        </button>
+                    </div>
+                    <div class="divCancel" id="CancelButton">
+                        <button type="button" class="buttonGifRepetUpload" onclick="cancelarButton()">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="classCapture" id="gifUploadSuccess">
+            <div class="recordingDiv"> 
+                <div class="captureCreatemain">
+                    Guifo Subido Con Éxito
+                    <img src="./sources/images/button3.svg" alt="x">
+                </div>
+                <div class="createGifSuccess">
+                    <img id="GifFinalUpload" width="350" alt="Guifo" src="./sources/images/window_img.png" class="gifBorder"> 
+                    <div class="GifButtonSuccess">
+                        <h3 class="maginText">
+                            Guifo creado con éxito
+                        </h3>
+                        <div class="buttonsGifCreate">
+                            <a class="gif-container-repetir" onclick="copyClipboard()">
+                                Copiar Enlace Guifo
+                            </a>
+                            <a href="" class="gif-container-repetir" target="blank" id="downloadGif">
+                                Descargar Guifo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonReadyGif">
+                    <button class="buttonUploadGif" onclick="returnCrearGuifos()">
+                        Listo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+    <div class="galleryGifos">
+        <input type="text" placeholder="Mis guifos:" id="trendings" class="imputMisGuifos" readonly="readonly" disabled="disabled">
+        <div class="marginImages" id="misguifoscontainer"></div>
+    </div>
+
+<footer>
+    <p class="footerdMain">copyright @annyj211</p>
+</footer>
+
+<script src="./scripts/script1.js"></script>
+<script src="./scripts/script2.js"></script>
+<script src="./scripts/script3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"></script>
+</body>
+</html>

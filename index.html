@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/stylesdark.css">
+    <!-- g0VjvRHYxnGUGHSHqB4HexqaeXtUgAsi Key of giphy-->
+    <title>My proyect gifOS</title>
+</head>
+<body id="myBody" onload="UploadlastStyle()" class="light">
+<header>
+    <div class="headMain">
+        <p class="head">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </div> 
+    <div class="headerSearch">
+        <a title="Buscar gifs" href="index.html">
+            <img src="./sources/images/gifOF_logo.png" alt="GIFologo" class="imageMain" id="idLogo">
+        </a>
+            <div class="headerButton">
+                <a href="upload.html" class="button">Crear Guifos</a> <!--Con este boton se pueden crear gifos-->
+               
+            <div class="topic">
+                <select id="listTopic" onchange="changeStyle()" class="buttonTopic" >
+                    <option>Elegir tema</option>
+                    <option value="light">Sailor Day</option>
+                    <option value="dark" >Sailor Night</option>
+                </select>
+            </div>
+                <p><a href="upload.html#misGuifos"><u>M</u>is Guifos</a></p>     
+            </div>
+    </div>    
+</header>
+    <div class="borderSearch"><p>Buscar</p></div>
+    <div class="search">
+        <input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" id="searchtext" class="searchText" onkeyup="activeSearch();" onkeypress="return enterSearch(event);">
+        <button type="button" id="buttonSearch" class="buttonSearch" disabled="" onclick="getSearch();" value="Buscar"><img src="sources/images/lupa_inactive.svg" id="lens" alt="lupa"/>Buscar</button> 
+    </div> 
+    <div id="listAutocomplete" class="autoCompleteList">
+    </div>  
+    <div id="searchPreviews" class="previewsSearch">
+    </div>
+    <div id="searchResults" class="galleryGifos">
+    </div>
+    <div class="galleryGifos">
+        <input type="text" placeholder="Hoy te sugerimos:" id="suggestion" class="suggestion" readonly="readonly" disabled="disabled">        
+    </div>
+    <div class="galleryGifos2" id="galleryGifos">
+        <div id="idGallery" class="sectionRandom">  
+        </div>
+    </div>
+    <div class="galleryGifos">
+        <input type="text" placeholder="Tendencias:" id="trendings" class="suggestion" readonly="readonly" disabled="disabled">
+        <div class="marginImages" id="suggestionDiv"></div>
+    </div> 
+    <!-- <div>
+        <video autoplay></video>
+        <button type="button" id='boton' class="botongrabar">Grabar</button>
+    </div> -->
+  
+
+<footer>
+<p class="footerdMain">copyright @annyj211</p>
+</footer>
+<script> </script>  
+<script> ;</script> 
+<!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script> -->
+<script src="./scripts/script1.js"></script>
+<script src="./scripts/script2.js"></script>
+<script src="./scripts/script3.js"></script>
+</body>
+</html>
